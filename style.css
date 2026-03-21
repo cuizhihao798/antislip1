@@ -1,0 +1,222 @@
+/* ===== 防溜车监控系统 · 全局深色主题 ===== */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+:root {
+    --bg:      #0a0f1e;
+    --bg2:     #0f1729;
+    --bg3:     #141f38;
+    --bg4:     #1a2847;
+    --border:  #1e3260;
+    --border2: #2a4480;
+    --blue:    #3b82f6;
+    --cyan:    #06b6d4;
+    --green:   #10b981;
+    --amber:   #f59e0b;
+    --red:     #ef4444;
+    --purple:  #8b5cf6;
+    --text:    #e2e8f0;
+    --text2:   #94a3b8;
+    --text3:   #475569;
+    --mono:    'JetBrains Mono', monospace;
+    --sans:    'Noto Sans SC', sans-serif;
+}
+
+/* 整体背景 */
+.stApp { background: var(--bg) !important; font-family: var(--sans); }
+[data-testid="stSidebar"] { background: var(--bg2) !important; border-right: 1px solid var(--border); }
+[data-testid="stSidebarContent"] { background: var(--bg2) !important; }
+section.main { background: var(--bg) !important; }
+.block-container { padding: 1.2rem 1.5rem !important; max-width: 100% !important; }
+
+/* 标题 */
+h1,h2,h3,h4 { color: var(--text) !important; font-family: var(--sans) !important; }
+h1 { font-size: 1.3rem !important; font-weight: 500 !important; }
+h2 { font-size: 1.05rem !important; font-weight: 500 !important; }
+p, li { color: var(--text2) !important; }
+
+/* 指标卡 */
+[data-testid="metric-container"] {
+    background: var(--bg2) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    padding: 14px 16px !important;
+}
+[data-testid="stMetricLabel"] { color: var(--text3) !important; font-family: var(--mono) !important; font-size: 11px !important; letter-spacing: .05em; }
+[data-testid="stMetricValue"] { color: var(--text) !important; font-family: var(--mono) !important; font-size: 1.6rem !important; }
+[data-testid="stMetricDelta"] { font-family: var(--mono) !important; font-size: 11px !important; }
+
+/* 数据表格 */
+[data-testid="stDataFrame"] { background: var(--bg2) !important; border: 1px solid var(--border) !important; border-radius: 8px !important; }
+.stDataFrame th { background: var(--bg3) !important; color: var(--text3) !important; font-family: var(--mono) !important; font-size: 11px !important; }
+.stDataFrame td { color: var(--text2) !important; font-family: var(--mono) !important; font-size: 11px !important; }
+
+/* 按钮 */
+.stButton > button {
+    background: var(--bg3) !important;
+    border: 1px solid var(--border2) !important;
+    color: var(--text2) !important;
+    border-radius: 6px !important;
+    font-family: var(--sans) !important;
+    font-size: 12px !important;
+    transition: all .15s !important;
+}
+.stButton > button:hover { background: var(--bg4) !important; color: var(--text) !important; }
+
+/* 侧边栏导航 */
+[data-testid="stSidebarNav"] a {
+    color: var(--text2) !important;
+    font-size: 13px !important;
+    font-family: var(--sans) !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+}
+[data-testid="stSidebarNav"] a:hover { background: var(--bg3) !important; color: var(--text) !important; }
+[data-testid="stSidebarNav"] [aria-selected="true"] {
+    background: rgba(59,130,246,.15) !important;
+    color: var(--blue) !important;
+    border: 1px solid rgba(59,130,246,.2) !important;
+}
+
+/* selectbox / input */
+[data-baseweb="select"] > div { background: var(--bg3) !important; border-color: var(--border) !important; color: var(--text) !important; }
+[data-baseweb="input"] > div { background: var(--bg3) !important; border-color: var(--border) !important; }
+input { color: var(--text) !important; }
+.stSelectbox label, .stTextInput label { color: var(--text2) !important; font-size: 12px !important; }
+
+/* plotly 图表背景透明 */
+.js-plotly-plot .plotly .main-svg { background: transparent !important; }
+
+/* 分隔线 */
+hr { border-color: var(--border) !important; }
+
+/* 卡片容器 */
+.rail-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+.rail-card-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text3);
+    letter-spacing: .08em;
+    font-family: var(--mono);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* 徽章 */
+.badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-family: var(--mono);
+    font-weight: 500;
+}
+.badge-green  { background:rgba(16,185,129,.12); color:#10b981; border:1px solid rgba(16,185,129,.25); }
+.badge-blue   { background:rgba(59,130,246,.12);  color:#3b82f6; border:1px solid rgba(59,130,246,.25); }
+.badge-amber  { background:rgba(245,158,11,.12);  color:#f59e0b; border:1px solid rgba(245,158,11,.25); }
+.badge-red    { background:rgba(239,68,68,.12);   color:#ef4444; border:1px solid rgba(239,68,68,.25); }
+.badge-gray   { background:rgba(71,85,105,.2);    color:#94a3b8; border:1px solid rgba(71,85,105,.3); }
+
+/* 报警条 */
+.alarm-strip {
+    display: flex;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border-left: 3px solid;
+    margin-bottom: 8px;
+}
+.alarm-red    { background:rgba(239,68,68,.05);  border-left-color:#ef4444; }
+.alarm-amber  { background:rgba(245,158,11,.05); border-left-color:#f59e0b; }
+.alarm-green  { background:rgba(16,185,129,.05); border-left-color:#10b981; }
+.alarm-title  { font-size:13px; font-weight:500; color:#e2e8f0; margin-bottom:3px; }
+.alarm-sub    { font-size:11px; color:#475569; font-family:'JetBrains Mono',monospace; }
+
+/* 互锁行 */
+.lock-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #1e3260;
+    font-size: 12px;
+    color: #94a3b8;
+}
+.lock-row:last-child { border-bottom: none; }
+.lock-icon {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700; flex-shrink: 0;
+}
+.l-ok   { background:rgba(16,185,129,.2);  color:#10b981; }
+.l-warn { background:rgba(245,158,11,.2);  color:#f59e0b; }
+.l-err  { background:rgba(239,68,68,.2);   color:#ef4444; }
+
+/* 流程步骤 */
+.flow-wrap { display:flex; align-items:center; gap:4px; flex-wrap:wrap; }
+.fstep {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid #1e3260;
+    background: #141f38;
+    color: #475569;
+}
+.fstep.done   { background:rgba(16,185,129,.1); color:#10b981; border-color:rgba(16,185,129,.3); }
+.fstep.active { background:rgba(59,130,246,.15); color:#3b82f6; border-color:rgba(59,130,246,.4); font-weight:500; }
+.farrow { color:#475569; font-size:11px; }
+
+/* 防溜车卡 */
+.vcard {
+    background: #141f38;
+    border: 1px solid #1e3260;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 11px;
+}
+.vcard-fault    { border-color: rgba(239,68,68,.4);  background:rgba(239,68,68,.04); }
+.vcard-charging { border-color: rgba(59,130,246,.3); }
+.vcard-id { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:500; color:#e2e8f0; margin-bottom:6px; display:flex; justify-content:space-between; align-items:center; }
+.batt-outer { height:4px; background:#0a0f1e; border-radius:2px; margin:5px 0; overflow:hidden; }
+.batt-inner { height:100%; border-radius:2px; }
+.vcard-sub { font-size:10px; color:#475569; font-family:'JetBrains Mono',monospace; line-height:1.7; }
+
+/* 股道 */
+.track-wrap { display:flex; flex-direction:column; gap:10px; }
+.track-row-item { display:flex; align-items:center; gap:10px; }
+.track-num { font-family:'JetBrains Mono',monospace; font-size:11px; color:#475569; width:40px; flex-shrink:0; }
+.track-rail { flex:1; height:28px; background:#0f1729; border-radius:4px; border:1px solid #1e3260; display:flex; align-items:center; padding:0 8px; overflow:hidden; }
+.track-train { height:20px; border-radius:3px; display:flex; align-items:center; padding:0 10px; font-size:10px; font-family:'JetBrains Mono',monospace; gap:5px; white-space:nowrap; }
+.train-blue  { background:rgba(59,130,246,.2);  border:1px solid rgba(59,130,246,.4);  color:#3b82f6; }
+.train-amber { background:rgba(245,158,11,.15); border:1px solid rgba(245,158,11,.3);  color:#f59e0b; }
+.track-status { width:160px; flex-shrink:0; display:flex; align-items:center; justify-content:flex-end; gap:6px; }
+/* 固定侧边栏宽度，防止遮挡主内容 */
+[data-testid="stSidebar"] {
+    min-width: 200px !important;
+    max-width: 200px !important;
+    width: 200px !important;
+}
+
+[data-testid="stSidebarContent"] {
+    width: 200px !important;
+}
+
+/* 主内容区留出侧边栏空间 */
+.main .block-container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    max-width: 100% !important;
+}
+
+/* 导航栏文字不截断 */
+[data-testid="stSidebarNav"] a span {
+    font-size: 13px !important;
+    white-space: nowrap !important;
+}
