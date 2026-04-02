@@ -58,8 +58,7 @@ with col_cmd:
         if "失败" in val:    return "color:#ef4444;font-family:'JetBrains Mono',monospace"
         return "color:#94a3b8;font-family:'JetBrains Mono',monospace"
 
-    st.dataframe(
-        df_log.style.applymap(style_status, subset=["状态"]),
+  st.dataframe(df_log.style.map(style_status, subset=["status"]),
         use_container_width=True, hide_index=True, height=180,
     )
     st.markdown("</div>", unsafe_allow_html=True)
