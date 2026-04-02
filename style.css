@@ -2,21 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
 
 :root {
-    --bg:#e8f0f9;
-    --bg2:#d6e4f5;
-    --bg3:#c8d9ef;
-    --bg4:#b8cce8;
-    --border:#a0bcdc;
-    --border2:#7a9ec8;
+    --bg:#0a0f1e;
+    --bg2:#0f1729;
+    --bg3:#141f38;
+    --bg4:#1a2847;
+    --border:#1e3260;
+    --border2:#2a4480;
     --blue:    #3b82f6;
     --cyan:    #06b6d4;
     --green:   #10b981;
     --amber:   #f59e0b;
     --red:     #ef4444;
     --purple:  #8b5cf6;
-    --text:#1a2e4a;
-    --text2:#2d4a6e;
-    --text3:#4a6080;
+   --text:#e2e8f0;
+    --text2:#94a3b8;
+    --text3:#475569;
     --mono:    'JetBrains Mono', monospace;
     --sans:    'Noto Sans SC', sans-serif;
 }
